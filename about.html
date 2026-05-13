@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Татар Мастер</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/header/logo.svg" type="image/x-icon">
+    <meta name="description" content="Сохраняем традиции уникальных промыслов региона">
+    <meta name="keywords" content="Натуральные продукты, татар, Сувенирная продукция, Народные промыслы">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="h-up">
+                <nav class="h-up-nav desktop">
+                    <a href="#" class="h-up-nav-link">контакты</a>
+                    <a href="#" class="h-up-nav-link">о компании</a>
+                    <a href="#" class="h-up-nav-link">блог</a>
+                    <a href="#" class="h-up-nav-link">оплата и доставка</a>
+                    <a href="#" class="h-up-nav-link">для мастеров</a>
+                    <a href="catalog-categ-corp.html" class="h-up-nav-link">корпоративным клиентам</a>
+                </nav>
+                <div class="h-up-r">
+                    <a href="tel:+78001169966">8 800 116 99 66</a>
+                    <a href="#">telegram</a>
+                </div>
+            </div>
+            <div class="h-down">
+                <div class="h-down-l">
+                    <a href="index.html"> <img src="assets/images/header/logo.svg" alt="logo" class="logo"></a>
+
+                    <div class="h-down-l-btn-input desktop">
+                        <button class="btn header-btn catalog-btn" id="catalogBtn">
+                            <img src="assets/images/header/menu.svg" alt="menu">
+                            каталог
+                        </button>
+                        <div class="input-box-h btn">
+                            <img src="assets/images/header/search-normal.svg" alt="search-normal">
+                            <input type="text" placeholder="поиск по каталогу" class="input-header" id="searchInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-down-r desktop">
+                    <button class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></button>
+                    <button class="btn btn-center"><img src="assets/images/header/Heart.svg" alt="menu"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Выпадающая плашка КАТАЛОГА (внутри header, после container) -->
+        <div class="catalog-dropdown" id="catalogDropdown">
+            <div class="catalog-dropdown-container">
+                <div class="catalog-grid">
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Натуральные продукты</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Овощи и фрукты</a></li>
+                            <li><a href="#">Мясо</a></li>
+                            <li><a href="#">Сладкое</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Сувенирная продукция</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Подарки из Казани</a></li>
+                            <li><a href="#">Украшения</a></li>
+                            <li><a href="#">Национальные подарки</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Изделия ручной работы</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Игрушки</a></li>
+                            <li><a href="#">Посуда</a></li>
+                            <li><a href="#">Бижутерия</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Народные промыслы</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Одежда</a></li>
+                            <li><a href="#">Обувь</a></li>
+                            <li><a href="#">Бижютерия</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <a href="#" class="cat-btn btn"><img src="assets/images/header/arrow-rightCat.svg" alt="arr">посмотреть
+                    все товары</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Оверлей для затемнения фона (вне header) -->
+    <div class="catalog-overlay" id="catalogOverlay"></div>
+
+    <!-- Выдвигающаяся панель поиска -->
+    <div class="search-expand-overlay" id="searchExpandOverlay">
+        <div class="search-expand-container">
+            <div class="search-expand-box">
+                <input type="text" placeholder="Чак-чак" class="search-expand-input" id="searchExpandInput">
+                <button class="search-expand-btn btn" id="searchExpandBtn">Найти</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <nav class="h-up-nav header-nav-up-mobile">
+                <a href="#" class="h-up-nav-link">контакты</a>
+                <a href="#" class="h-up-nav-link">о компании</a>
+                <a href="#" class="h-up-nav-link">блог</a>
+                <a href="#" class="h-up-nav-link">оплата и доставка</a>
+                <a href="#" class="h-up-nav-link">для мастеров</a>
+                <a href="#" class="h-up-nav-link">корпоративным клиентам</a>
+            </nav>
+            <div class="h-down-l-btn-input ">
+                <button class="btn header-btn" id="mobileCatalogOpen"><img src="assets/images/header/menu.svg"
+                        alt="menu">
+                    каталог</button>
+                <div class="input-box-h btn ">
+                    <img src="assets/images/header/search-normal.svg" alt="search-normal">
+                    <input type="text" placeholder="поиск по каталогу" class="input-header">
+                </div>
+            </div>
+            <div class="h-down-r">
+                <button class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></button>
+                <button class="btn btn-center"><img src="assets/images/header/Heart.svg" alt="menu"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Мобильный каталог (вторая створка) -->
+    <div class="mobile-catalog" id="mobileCatalog">
+        <div class="mobile-catalog__header">
+            <button class="mobile-catalog__back" id="mobileCatalogBack">
+                <img src="assets/images/header/back.svg" alt="back">
+            </button>
+            <button class="mobile-catalog__close" id="mobileCatalogClose">
+                <img src="assets/images/catalog/close.svg" alt="close">
+            </button>
+        </div>
+
+        <div class="mobile-catalog__body">
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-1">
+                    <span>Натуральные продукты</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-1">
+                    <a href="#">Овощи и фрукты</a>
+                    <a href="#">Мясо</a>
+                    <a href="#">Сладкое</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-2">
+                    <span>Сувенирная продукция</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-2">
+                    <a href="#">Подарки из Казани</a>
+                    <a href="#">Украшения</a>
+                    <a href="#">Национальные подарки</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-3">
+                    <span>Изделия ручной работы</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-3">
+                    <a href="#">Игрушки</a>
+                    <a href="#">Посуда</a>
+                    <a href="#">Бижутерия</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-4">
+                    <span>Народные промыслы</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-4">
+                    <a href="#">Одежда</a>
+                    <a href="#">Обувь</a>
+                    <a href="#">Бижютерия</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <main class="main">
+        <div class="about-Page">
+            <div class="breadcrumb ">
+                <div class="container">
+                    <div class="breadcrumb-box">
+                        <a href="#" class="bread">главная</a>
+                        <p>•</p>
+                        <a href="#" class="bread">о компании</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-box">
+                <div class="container">
+                    <h2>О компании</h2>
+                    <div class="about-content">
+                        <div class="about-l">
+                            <p class="about-up">Объединяем тех, кто бережно хранит и передает традиции уникальных
+                                промыслов нашего родного края - Республики Татарстан</p>
+                            <div class="about-down">
+                                <p class="about-p"><span class="about-span">Наша миссия</span>, Мы видим свое
+                                    предназначение в том, чтобы сделать
+                                    уникальное культурное наследие Татарстана живым и актуальным для каждого человека.
+                                    Наша цель — не просто продавать изделия, а просвещать и вдохновлять, превращая
+                                    аутентичные ремесла в предмет национальной гордости. Мы стремимся к тому, чтобы в
+                                    каждом доме, будь то в Казани или за тысячи километров от нее, частичка татарской
+                                    души напоминала о богатстве нашей истории.</p>
+                                <p class="about-p"><span class="about-span">Ценности</span>, В основе нашей работы лежит
+                                    безусловная верность оригиналу,
+                                    поэтому мы сотрудничаем только с теми мастерами, которые соблюдают каноны
+                                    традиционного производства. Мы ценим безупречное качество исполнения, ведь каждое
+                                    изделие — это лицо нашего края, требующее внимания к каждой детали. Превыше всего мы
+                                    ставим преемственность, поддерживая династии умельцев и создавая условия для того,
+                                    чтобы молодежь с гордостью перенимала секреты древних промыслов.</p>
+                            </div>
+                        </div>
+                        <div class="about-r"><img src="assets/images/about.png" alt="about"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cat-slider mt100">
+                <div class="container">
+                    <div class="cat-slider-header">
+                        <h2>Мероприятия</h2>
+                        <div class="cat-slider-header-btns ">
+                            <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                            <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                        </div>
+                    </div>
+
+                    <div class="cat-items swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <div class="blog-subdesc">
+                                    <p>Мероприятия</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="cat-btn btn"><img src="assets/images/header/arrow-rightCat.svg"
+                            alt="arr">посмотреть мероприятия</a>
+                </div>
+            </div>
+
+            <div class="doc-slider mt100">
+                <div class="container">
+                    <div class="cat-slider-header">
+                        <h2>Документы</h2>
+                        <div class="cat-slider-header-btns ">
+                            <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                            <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                        </div>
+                    </div>
+
+                    <div class="doc-items swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Свидетельство о государственной регистрации</p>
+                            </a>
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Лицензии на осуществление деятельности</p>
+                            </a>
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Сертификаты соответствия и качества</p>
+                            </a>
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Уставные документы организации</p>
+                            </a>
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Свидетельство о государственной регистрации</p>
+                            </a>
+                            <a href="#" class="cat-item doc-item swiper-slide">
+                                <img src="assets/images/document-download.svg" alt="img">
+                                <p class="blog-title">Свидетельство о государственной регистрации</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="vop about-vop mt100">
+                    <div class="vop-box">
+                        <div class="about-vop-box">
+                            <p class="vop-t">Приглашаем к <br> сотрудничеству</p>
+                            <p class="vop-desc">Присоединяйтесь к сообществу профессионалов, которые создают уникальный
+                                продукт и ценят локальную культуру</p>
+                        </div>
+
+                        <div class="about-btn-box"> 
+                            <button class="btn header-btn hover-grey-btn" id="zayavOpen"
+                                style="font-weight: 500; border: 1px solid black; background: none;"><img
+                                    src="assets/images/footer/message-notif.svg" alt="img">Оставить заявку</button>
+                            <button class="btn header-btn hover-grey-btn"
+                                style="font-weight: 500; border: 1px solid black; background: none;">Подробнее</button>
+                        </div>
+
+                    </div>
+
+                            <img src="assets/images/master/imgmaster.png" alt="img" class="about-img">
+                      
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="footer-l">
+                    <div class="footer-item ">
+                        <a href="tel:+88001169966" class="footer-i-title">8 800 116 99 66 </a>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">позвоните нам</p>
+                    </div>
+                    <div class="footer-item ">
+                        <p class="footer-i-title ">Казань, ул. Туфана Миннуллина, д. 14/56 </p>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">приходите к нам</p>
+                    </div>
+                    <div class="footer-item">
+                        <a href="mailto:info@tatarmaster.ru" class="footer-i-title  ">info@tatarmaster.ru</a>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">напишите на почту</p>
+                    </div>
+                    <button class="btn header-btn hover-grey-btn" style="font-weight: 500;"><img
+                            src="assets/images/footer/message-notif.svg" alt="img">Задать
+                        вопрос</button>
+                </div>
+                <div class="footer-r">
+                    <div class="footer-r-up">
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title ">Каталог</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-item-list">
+                                <a href="#">Натуральные продукты</a>
+                                <a href="#">Сувенирная продукция</a>
+                                <a href="#">Изделия ручной работы</a>
+                                <a href="#">Народные промыслы</a>
+                                <a href="#">Корпоративным клиентам</a>
+                            </div>
+                        </div>
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title ">Компания</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-item-list">
+                                <a href="#">Контакты</a>
+                                <a href="#">Оплата и доставка</a>
+                                <a href="#">Блог</a>
+                                <a href="#">Для мастеров</a>
+                                <a href="#">О компании</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-r-down">
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title  ">Соцсети</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-down-item-list">
+                                <a href="#"> <img src="assets/images/footer/tg.svg" alt="social"></a>
+                                <a href="#"> <img src="assets/images/footer/vk.svg" alt="social">
+                                </a>
+                                <a href="#"> <img src="assets/images/footer/ws.svg" alt="social">
+                                </a>
+                                <a href="#"> <img src="assets/images/footer/yt.svg" alt="social">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down">
+                <p class="footer-down-desc">© 2026 Официальный сайт ТатарМастер. Все права защищены</p>
+                <a href="#" class="footer-down-a" download="#">Политика конфиденциальности</a>
+                <div class="footer-down-pol-box">
+                    <p class="footer-down-desc">Разработка и продвижение</p>
+                    <img src="assets/images/footer/every.svg" alt="every">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+      <div class="cookie">
+        <div class="container">
+            <div class="cookie-box">
+                <p class="cookie-desc">Мы используем <a href="#" style="text-decoration: underline;">файлы cookie</a> для корректной работы сайта, анализа трафика и
+                    улучшения
+                    сервиса. Продолжая использовать сайт, <a href="#" style="text-decoration: underline;">вы соглашаетесь с обработкой данных.</a> </p>
+                <button class="btn cookie-btn">Окей</button>
+            </div>
+
+        </div>
+    </div>
+
+  
+
+<!-- Оверлей заявки -->
+<div class="anketa-overlay" id="zayavOverlay"></div>
+
+<!-- Панель заявки -->
+<aside class="anketa-panel" id="zayavPanel">
+    <button class="anketa-panel__close" id="zayavClose" aria-label="Закрыть">
+        <img src="assets/images/catalog/close.svg" alt="close">
+    </button>
+
+    <!-- Форма -->
+    <div class="anketa-form-view" id="zayavFormView">
+        <div class="anketa-panel__header">
+            <div class="anketa-panel__header-title">
+                <h2>Оставьте заявку – <br>
+мы вам перезвоним!</h2>
+            </div>
+        </div>
+
+        <div class="anketa-panel__body">
+            <div class="anketa-field">
+                <label for="zav-name">Как вас зовут?</label>
+                <input type="text" id="zav-name" placeholder="Максим" autocomplete="off">
+                <span class="anketa-field__error" id="zerr-name">Введите ваше имя</span>
+            </div>
+            <div class="anketa-field">
+                <label for="zav-phone">Ваш телефон</label>
+                <input type="tel" id="zav-phone" placeholder="+7 (***) ***-**-**" autocomplete="off">
+                <span class="anketa-field__error" id="zerr-phone">Введите корректный номер</span>
+            </div>
+        </div>
+
+        <div class="anketa-panel__footer">
+            <button class="anketa-panel__apply" id="zayavSubmit">
+                <img src="assets/images/catalog/check.svg" alt="check">
+              Оставить заявку
+            </button>
+            <p class="anketa-panel__note">Нажимая кнопку «Отправить заявку», я подтверждаю, что ознакомился с Политикой конфиденциальности.</p>
+        </div>
+    </div>
+
+    <!-- Экран успеха -->
+    <div class="anketa-success-view" id="zayavSuccessView">
+        <div class="anketa-success__body">
+            <img src="assets/images/master/chack.png" alt="Успешно" class="anketa-success__img">
+            <p class="anketa-success__text">Заявка успешно отправлена!<br>Скоро мы вам позвоним</p>
+            <button class="anketa-panel__apply anketa-success__btn" id="zayavSuccessClose">Хорошо</button>
+        </div>
+    </div>
+</aside>
+</body>
+
+</html>

@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Татар Мастер</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/header/logo.svg" type="image/x-icon">
+    <meta name="description" content="Сохраняем традиции уникальных промыслов региона">
+    <meta name="keywords" content="Натуральные продукты, татар, Сувенирная продукция, Народные промыслы">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="h-up">
+                <nav class="h-up-nav desktop">
+                    <a href="contact.html" class="h-up-nav-link">контакты</a>
+                    <a href="about.html" class="h-up-nav-link">о компании</a>
+                    <a href="blog.html" class="h-up-nav-link">блог</a>
+                    <a href="op_delivery.html" class="h-up-nav-link">оплата и доставка</a>
+                    <a href="master.html" class="h-up-nav-link">для мастеров</a>
+                    <a href="catalog-categ-corp.html" class="h-up-nav-link">корпоративным клиентам</a>
+                </nav>
+                <div class="h-up-r">
+                    <a href="tel:+78001169966">8 800 116 99 66</a>
+                    <a href="#">telegram</a>
+                </div>
+            </div>
+            <div class="h-down">
+                <div class="h-down-l">
+                    <a href="index.html"> <img src="assets/images/header/logo.svg" alt="logo" class="logo"></a>
+
+                    <div class="h-down-l-btn-input desktop">
+                        <button class="btn header-btn catalog-btn" id="catalogBtn">
+                            <img src="assets/images/header/menu.svg" alt="menu">
+                            каталог
+                        </button>
+                        <div class="input-box-h btn">
+                            <img src="assets/images/header/search-normal.svg" alt="search-normal">
+                            <input type="text" placeholder="поиск по каталогу" class="input-header" id="searchInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-down-r desktop">
+                    <button class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></button>
+                    <button class="btn btn-center"><img src="assets/images/header/Heart.svg" alt="menu"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Выпадающая плашка КАТАЛОГА (внутри header, после container) -->
+        <div class="catalog-dropdown" id="catalogDropdown">
+            <div class="catalog-dropdown-container">
+                <div class="catalog-grid">
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Натуральные продукты</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Овощи и фрукты</a></li>
+                            <li><a href="#">Мясо</a></li>
+                            <li><a href="#">Сладкое</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Сувенирная продукция</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Подарки из Казани</a></li>
+                            <li><a href="#">Украшения</a></li>
+                            <li><a href="#">Национальные подарки</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Изделия ручной работы</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Игрушки</a></li>
+                            <li><a href="#">Посуда</a></li>
+                            <li><a href="#">Бижутерия</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="catalog-col">
+                        <h3 class="catalog-col-title">Народные промыслы</h3>
+                        <ul class="catalog-list">
+                            <li><a href="#">Одежда</a></li>
+                            <li><a href="#">Обувь</a></li>
+                            <li><a href="#">Бижютерия</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <a href="#" class="cat-btn btn"><img src="assets/images/header/arrow-rightCat.svg" alt="arr">посмотреть
+                    все товары</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Оверлей для затемнения фона (вне header) -->
+    <div class="catalog-overlay" id="catalogOverlay"></div>
+
+    <!-- Выдвигающаяся панель поиска -->
+    <div class="search-expand-overlay" id="searchExpandOverlay">
+        <div class="search-expand-container">
+            <div class="search-expand-box">
+                <input type="text" placeholder="Чак-чак" class="search-expand-input" id="searchExpandInput">
+                <button class="search-expand-btn btn" id="searchExpandBtn">Найти</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <nav class="h-up-nav header-nav-up-mobile">
+                <a href="contact.html" class="h-up-nav-link">контакты</a>
+                <a href="about.html" class="h-up-nav-link">о компании</a>
+                <a href="blog.html" class="h-up-nav-link">блог</a>
+                <a href="op_delivery.html" class="h-up-nav-link">оплата и доставка</a>
+                <a href="master.html" class="h-up-nav-link">для мастеров</a>
+                <a href="catalog-categ-corp.html" class="h-up-nav-link">корпоративным клиентам</a>
+            </nav>
+            <div class="h-down-l-btn-input ">
+                <button class="btn header-btn" id="mobileCatalogOpen"><img src="assets/images/header/menu.svg"
+                        alt="menu">
+                    каталог</button>
+                <div class="input-box-h btn ">
+                    <img src="assets/images/header/search-normal.svg" alt="search-normal">
+                    <input type="text" placeholder="поиск по каталогу" class="input-header">
+                </div>
+            </div>
+            <div class="h-down-r">
+                <button class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></button>
+                <button class="btn btn-center"><img src="assets/images/header/Heart.svg" alt="menu"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Мобильный каталог (вторая створка) -->
+    <div class="mobile-catalog" id="mobileCatalog">
+        <div class="mobile-catalog__header">
+            <button class="mobile-catalog__back" id="mobileCatalogBack">
+                <img src="assets/images/header/back.svg" alt="back">
+            </button>
+            <button class="mobile-catalog__close" id="mobileCatalogClose">
+                <img src="assets/images/catalog/close.svg" alt="close">
+            </button>
+        </div>
+
+        <div class="mobile-catalog__body">
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-1">
+                    <span>Натуральные продукты</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-1">
+                    <a href="#">Овощи и фрукты</a>
+                    <a href="#">Мясо</a>
+                    <a href="#">Сладкое</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-2">
+                    <span>Сувенирная продукция</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-2">
+                    <a href="#">Подарки из Казани</a>
+                    <a href="#">Украшения</a>
+                    <a href="#">Национальные подарки</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-3">
+                    <span>Изделия ручной работы</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-3">
+                    <a href="#">Игрушки</a>
+                    <a href="#">Посуда</a>
+                    <a href="#">Бижутерия</a>
+                </div>
+            </div>
+
+            <div class="mob-cat-group">
+                <button class="mob-cat-toggle" data-target="mob-cat-4">
+                    <span>Народные промыслы</span>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="#F5F5F5" />
+                        <path
+                            d="M32.9201 21.9502L26.4001 28.4702C25.6301 29.2402 24.3701 29.2402 23.6001 28.4702L17.0801 21.9502"
+                            stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="mob-cat-content" id="mob-cat-4">
+                    <a href="#">Одежда</a>
+                    <a href="#">Обувь</a>
+                    <a href="#">Бижютерия</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="home-up-categ">
+            <div class="container">
+                <a href="#" class="home-up-categ-item green">
+                    <p class="home-up-cat-title">Натуральные продукты</p>
+
+                    <img src="assets/images/img1.png" alt="img" class="home-up-cat-img">
+
+
+                    <div class="arrow-box">
+                        <img src="assets/images/header/arrow-right.svg" alt="arr">
+                    </div>
+                </a>
+                <a href="#" class="home-up-categ-item orange">
+                    <p class="home-up-cat-title">Сувенирная продукция</p>
+                    <img src="assets/images/img2.png" alt="img" class="home-up-cat-img">
+                    <div class="arrow-box">
+                        <img src="assets/images/header/arrow-right.svg" alt="arr">
+                    </div>
+                </a>
+                <a href="#" class="home-up-categ-item yellowWhite">
+                    <p class="home-up-cat-title" style="color: black;">Изделия ручной работы</p>
+                    <img src="assets/images/img3.png" alt="img" class="home-up-cat-img">
+                    <div class="arrow-box">
+                        <svg class="desktop-svg" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1956 14.6136L30.6413 14.6136L30.6413 26.0593" stroke="white" stroke-width="2"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.6135 30.6413L30.481 14.7738" stroke="white" stroke-width="2"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg class="mobile-svg" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1956 14.6136L30.6413 14.6136L30.6413 26.0593" stroke="black" stroke-width="2"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.6135 30.6413L30.481 14.7738" stroke="black" stroke-width="2"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </a>
+                <a href="#" class="home-up-categ-item yellow">
+                    <p class="home-up-cat-title">Народные промыслы</p>
+                    <img src="assets/images/img4.png" alt="img" class="home-up-cat-img">
+                    <div class="arrow-box">
+                        <img src="assets/images/header/arrow-right.svg" alt="arr">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="cat-slider mt100">
+            <div class="container">
+                <div class="cat-slider-header">
+                    <h2>Популярные товары</h2>
+                    <div class="cat-slider-header-btns ">
+                        <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                        <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                    </div>
+                </div>
+
+                <div class="cat-items swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <a href="catalog.html" class="cat-btn btn"><img src="assets/images/header/arrow-rightCat.svg"
+                        alt="arr">посмотреть
+                    все товары</a>
+            </div>
+        </div>
+
+
+        <div class="cat-slider cat-slider-padding cat-slider-bg cat-slider-bg-green cat-slider-position">
+
+            <img src="assets/images/Vector.png" alt="viewBox" class="Vector1">
+            <img src="assets/images/Vector2.png" alt="viewBox" class="Vector2">
+            <div class="container">
+                <div class="cat-slider-header">
+                    <h2>Натуральные продукты</h2>
+                    <div class="cat-slider-header-btns ">
+                        <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                        <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                    </div>
+                </div>
+
+                <div class="cat-items swiper">
+                    <div class="swiper-wrapper">
+                        <a href="product.html" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+
+                        </a>
+                        <a href="#" class="cat-item swiper-slide">
+                            <div class="cat-item-img-box">
+                                <img src="assets/images/imgH.png" alt="img">
+                            </div>
+                            <p class="cat-price">640 ₽</p>
+                            <div class="cat-title-art">
+                                <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                <p class="cat-art">арт. 348954</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <a href="#" class="cat-btn btn cat-slider-btn"><img src="assets/images/header/arrow-rightCat.svg"
+                        alt="arr">посмотреть
+                    все товары</a>
+            </div>
+        </div>
+
+        <div class="cat-slider-bg-back-green cat-slider-position">
+            <img src="assets/images/Vector.png" alt="viewBox" class="Vector1">
+            <img src="assets/images/Vector2.png" alt="viewBox" class="Vector2">
+            <div class="cat-slider cat-slider-padding cat-slider-bg cat-slider-bg-orange">
+                <div class="container">
+                    <div class="cat-slider-header">
+                        <h2>Сувенирная продукция</h2>
+                        <div class="cat-slider-header-btns ">
+                            <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                            <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                        </div>
+                    </div>
+
+                    <div class="cat-items swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="cat-btn btn cat-slider-btn"><img src="assets/images/header/arrow-rightCat.svg"
+                            alt="arr">посмотреть
+                        все товары</a>
+                </div>
+            </div>
+        </div>
+        <div class="cat-slider-bg-orange cat-slider-position">
+            <img src="assets/images/Vector11.png" alt="viewBox" class="Vector1">
+            <img src="assets/images/Vector22.png" alt="viewBox" class="Vector2">
+            <div class="cat-slider cat-slider-padding cat-slider-bg cat-slider-bg-yellowWhite">
+                <div class="container">
+                    <div class="cat-slider-header">
+                        <h2 style="color: black;">Изделия ручной работы</h2>
+                        <div class="cat-slider-header-btns ">
+                            <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                            <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                        </div>
+                    </div>
+
+                    <div class="cat-items swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="cat-btn btn cat-slider-btn"><img src="assets/images/header/arrow-rightCat.svg"
+                            alt="arr">посмотреть
+                        все товары</a>
+                </div>
+            </div>
+        </div>
+        <div class="cat-slider-bg-yellowWhite cat-slider-position ">
+            <img src="assets/images/Vector.png" alt="viewBox" class="Vector1">
+            <img src="assets/images/Vector2.png" alt="viewBox" class="Vector2">
+            <div class="cat-slider cat-slider-padding cat-slider-bg cat-slider-bg-yellow cat-slider-bg-yellow-pos ">
+
+                <div class="container">
+                    <div class="cat-slider-header">
+                        <h2>Народные промыслы</h2>
+                        <div class="cat-slider-header-btns ">
+                            <img src="assets/images/header/arr-l.svg" alt="arr" class="swiper-button-prev-custom">
+                            <img src="assets/images/header/arr-r.svg" alt="arr" class="swiper-button-next-custom">
+                        </div>
+                    </div>
+
+                    <div class="cat-items swiper">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+
+                            </a>
+                            <a href="#" class="cat-item swiper-slide">
+                                <div class="cat-item-img-box">
+                                    <img src="assets/images/imgH.png" alt="img">
+                                </div>
+                                <p class="cat-price">640 ₽</p>
+                                <div class="cat-title-art">
+                                    <p class="cat-title">Фигурка Зилант Герб Казани оловянная на подставке</p>
+                                    <p class="cat-art">арт. 348954</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="cat-btn btn cat-slider-btn"><img src="assets/images/header/arrow-rightCat.svg"
+                            alt="arr">посмотреть
+                        все товары</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-blog mt100">
+            <div class="container">
+                <h2>Блог</h2>
+
+                <div class="blog-filters">
+                    <button class="btn blog-filter-btn blog-filter blog-all" data-filter="culture">Культура</button>
+                    <button class="btn blog-filter-btn blog-filter" data-filter="events">События</button>
+                    <button class="btn blog-filter-btn blog-filter" data-filter="articles">Полезные статьи</button>
+                </div>
+
+                <!-- Контент для категории "Культура" -->
+                <div class="blog-box" data-category="culture">
+                    <a href="#" class="blog-l">
+                        <div class="blog-img-box">
+                            <img src="assets/images/blog.png" alt="blog">
+                        </div>
+                        <div class="blog-subdesc">
+                            <p>Культура</p>
+                            <p>•</p>
+                            <p>17.02.2026</p>
+                        </div>
+                        <p class="blog-title">Как мы развиваем культуру Татарстана и почему это важно</p>
+                        <p class="blog-desc">Татарстан — это уникальное пространство, где традиции прошлого встречаются
+                            с
+                            инновациями будущего. В новой статье мы рассказываем о том, как современные проекты в
+                            искусстве,
+                            музыке и образовании помогают сохранять наше наследие и делать его актуальным для всего
+                            мира.
+                            Современные культурные центры в деревнях становятся точками притяжения с коворкингами и
+                            медиатеками. Посмотрим, как обновление общественных пространств в районах Татарстана меняет
+                            жизнь молодежи и возрождает интерес к местным традициям.</p>
+                    </a>
+                    <div class="blog-r">
+                        <div class="blog-r-up">
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Культура</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Феномен татарского дизайна: от орнамента
+                                    к
+                                    подиуму</p>
+                                <p class="blog-desc blog-r-desc">Узнайте, как древние узоры ичигов превращаются в тренды
+                                    высокой моды.
+                                    Мы расскажем о современных дизайнерах, которые переосмысливают национальный код и
+                                    делают
+                                    татарскую эстетику популярной в мегаполисах мира.</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Культура</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Возрождение татарских ремесел в
+                                    современном
+                                    мире</p>
+                                <p class="blog-desc blog-r-desc">Как мастера возрождают древние техники ковроткачества и
+                                    керамики,
+                                    создавая уникальные изделия, востребованные не только в Татарстане, но и за его
+                                    пределами.</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Культура</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Татарская музыка: от народных мотивов до
+                                    электроники</p>
+                                <p class="blog-desc blog-r-desc">Исследуем, как современные музыканты интегрируют
+                                    традиционные
+                                    татарские инструменты в электронную музыку, создавая уникальное звучание.</p>
+                            </a>
+                        </div>
+                        <a href="#" class="btn header-btn btn-home-blog">
+                            <img src="assets/images/header/arrow-rightCat.svg" alt="arr">Все статьи
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Контент для категории "События" -->
+                <div class="blog-box" data-category="events" style="display: none;">
+                    <a href="#" class="blog-l">
+                        <div class="blog-img-box">
+                            <img src="assets/images/blog-events.jpg" alt="events">
+                        </div>
+                        <div class="blog-subdesc">
+                            <p>События</p>
+                            <p>•</p>
+                            <p>20.02.2026</p>
+                        </div>
+                        <p class="blog-title">Главные культурные события весны в Татарстане</p>
+                        <p class="blog-desc">Весна 2026 года обещает быть насыщенной на культурные мероприятия. Открытие
+                            новых выставочных залов, международные фестивали и традиционные праздники. Рассказываем о
+                            самых
+                            ожидаемых событиях, которые нельзя пропустить.</p>
+                    </a>
+                    <div class="blog-r">
+                        <div class="blog-r-up">
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>События</p>
+                                    <p>•</p>
+                                    <p>19.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Международный фестиваль татарской
+                                    культуры
+                                </p>
+                                <p class="blog-desc blog-r-desc">Участники из 15 стран представят свои интерпретации
+                                    татарского
+                                    культурного наследия. Концерты, выставки и мастер-классы.</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>События</p>
+                                    <p>•</p>
+                                    <p>18.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Открытие нового культурного центра в
+                                    Казани
+                                </p>
+                                <p class="blog-desc blog-r-desc">Современное пространство объединит коворкинг, лекторий
+                                    и
+                                    выставочные залы. Ждем всех на открытии!</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>События</p>
+                                    <p>•</p>
+                                    <p>17.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Сабантуй 2026: программа и нововведения
+                                </p>
+                                <p class="blog-desc blog-r-desc">Рассказываем о том, что нового ждет гостей главного
+                                    татарского
+                                    праздника в этом году.</p>
+                            </a>
+                        </div>
+                        <a href="#" class="btn header-btn btn-home-blog">
+                            <img src="assets/images/header/arrow-rightCat.svg" alt="arr">Все статьи
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Контент для категории "Полезные статьи" -->
+                <div class="blog-box" data-category="articles" style="display: none;">
+                    <a href="#" class="blog-l">
+                        <div class="blog-img-box">
+                            <img src="assets/images/blog-articles.jpg" alt="articles">
+                        </div>
+                        <div class="blog-subdesc">
+                            <p>Полезные статьи</p>
+                            <p>•</p>
+                            <p>15.02.2026</p>
+                        </div>
+                        <p class="blog-title">Как начать изучать татарский язык: советы для начинающих</p>
+                        <p class="blog-desc">Пошаговое руководство для тех, кто хочет освоить татарский язык. Лучшие
+                            приложения,
+                            учебные материалы и методики, которые действительно работают.</p>
+                    </a>
+                    <div class="blog-r">
+                        <div class="blog-r-up">
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Полезные статьи</p>
+                                    <p>•</p>
+                                    <p>14.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Топ-10 мест в Татарстане для культурного
+                                    туризма</p>
+                                <p class="blog-desc blog-r-desc">От болгар до Свияжска — собрали самые интересные
+                                    локации
+                                    для
+                                    погружения в историю и культуру.</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Полезные статьи</p>
+                                    <p>•</p>
+                                    <p>13.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Татарская кухня: рецепты традиционных
+                                    блюд
+                                </p>
+                                <p class="blog-desc blog-r-desc">Учимся готовить настоящий эчпочмак, чак-чак и другие
+                                    национальные блюда с пошаговыми инструкциями.</p>
+                            </a>
+                            <a href="#" class="blog-r-item">
+                                <div class="blog-subdesc blog-r-subdesc">
+                                    <p>Полезные статьи</p>
+                                    <p>•</p>
+                                    <p>12.02.2026</p>
+                                </div>
+                                <p class="blog-title" style="font-weight: 700;">Как выбрать курсы татарского языка:
+                                    советы
+                                    экспертов</p>
+                                <p class="blog-desc blog-r-desc">Сравнение офлайн и онлайн форматов, критерии выбора
+                                    хороших
+                                    курсов
+                                    и отзывы учеников.</p>
+                            </a>
+                        </div>
+                        <a href="#" class="btn header-btn btn-home-blog">
+                            <img src="assets/images/header/arrow-rightCat.svg" alt="arr">Все статьи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <div class="footer-l">
+                    <div class="footer-item ">
+                        <a href="tel:+88001169966" class="footer-i-title">8 800 116 99 66 </a>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">позвоните нам</p>
+                    </div>
+                    <div class="footer-item ">
+                        <p class="footer-i-title ">Казань, ул. Туфана Миннуллина, д. 14/56 </p>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">приходите к нам</p>
+                    </div>
+                    <div class="footer-item">
+                        <a href="mailto:info@tatarmaster.ru" class="footer-i-title  ">info@tatarmaster.ru</a>
+                        <hr class="hr-down">
+                        <p class="footer-i-desc">напишите на почту</p>
+                    </div>
+                    <button class="btn header-btn hover-grey-btn" style="font-weight: 500;"><img
+                            src="assets/images/footer/message-notif.svg" alt="img">Задать
+                        вопрос</button>
+                </div>
+                <div class="footer-r">
+                    <div class="footer-r-up">
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title ">Каталог</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-item-list">
+                                <a href="#">Натуральные продукты</a>
+                                <a href="#">Сувенирная продукция</a>
+                                <a href="#">Изделия ручной работы</a>
+                                <a href="#">Народные промыслы</a>
+                                <a href="#">Корпоративным клиентам</a>
+                            </div>
+                        </div>
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title ">Компания</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-item-list">
+                                <a href="#">Контакты</a>
+                                <a href="#">Оплата и доставка</a>
+                                <a href="#">Блог</a>
+                                <a href="#">Для мастеров</a>
+                                <a href="#">О компании</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-r-down">
+                        <div class="footer-r-item">
+                            <p class="footer-r-item-title  ">Соцсети</p>
+                            <hr class="hr-down">
+                            <div class="footer-r-down-item-list">
+                                <a href="#"> <img src="assets/images/footer/tg.svg" alt="social"></a>
+                                <a href="#"> <img src="assets/images/footer/vk.svg" alt="social">
+                                </a>
+                                <a href="#"> <img src="assets/images/footer/ws.svg" alt="social">
+                                </a>
+                                <a href="#"> <img src="assets/images/footer/yt.svg" alt="social">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down">
+                <p class="footer-down-desc">© 2026 Официальный сайт ТатарМастер. Все права защищены</p>
+                <a href="politic.html" class="footer-down-a">Политика конфиденциальности</a>
+                <div class="footer-down-pol-box">
+                    <p class="footer-down-desc">Разработка и продвижение</p>
+                    <img src="assets/images/footer/every.svg" alt="every">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie">
+        <div class="container">
+            <div class="cookie-box">
+                <p class="cookie-desc">Мы используем <a href="#" style="text-decoration: underline;">файлы cookie</a>
+                    для корректной работы сайта, анализа трафика и
+                    улучшения
+                    сервиса. Продолжая использовать сайт, <a href="#" style="text-decoration: underline;">вы
+                        соглашаетесь с обработкой данных.</a> </p>
+                <button class="btn cookie-btn">Окей</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
