@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ── Мобильный каталог ────────────────────────────────────
-    const mobileCatalog   = document.getElementById('mobileCatalog');
-    const mobileCatalogBack  = document.getElementById('mobileCatalogBack');
+    const mobileCatalog = document.getElementById('mobileCatalog');
+    const mobileCatalogBack = document.getElementById('mobileCatalogBack');
     const mobileCatalogClose = document.getElementById('mobileCatalogClose');
-    const mobCatalogBtn   = document.getElementById('mobileCatalogOpen');
+    const mobCatalogBtn = document.getElementById('mobileCatalogOpen');
 
     function resetAccordions() {
         document.querySelectorAll('.mob-cat-content.visible').forEach(c => {
@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     }
 
-    if (mobCatalogBtn)      mobCatalogBtn.addEventListener('click', openMobileCatalog);
-    if (mobileCatalogBack)  mobileCatalogBack.addEventListener('click', closeMobileCatalog);
+    if (mobCatalogBtn) mobCatalogBtn.addEventListener('click', openMobileCatalog);
+    if (mobileCatalogBack) mobileCatalogBack.addEventListener('click', closeMobileCatalog);
     if (mobileCatalogClose) mobileCatalogClose.addEventListener('click', closeAll);
 
     // ── Аккордеон категорий ──────────────────────────────────
- 
+
 
 });
 
@@ -83,9 +83,10 @@ document.querySelectorAll('.mob-cat-toggle').forEach(btn => {
 //скрытие верхней шапки
 document.addEventListener('DOMContentLoaded', function () {
     const headerUp = document.querySelector('.h-up');
-    const headerDown = document.querySelector('.h-down');
     const burger = document.querySelector('.burger');
-    let lastScrollTop = 0;
+    if (!headerUp) return;
+
+    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let ticking = false;
     let isHidden = false;
 
@@ -103,19 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Функция для плавного скрытия/показа
+    // Управляем только классом: плавность задаётся transition в CSS.
     function toggleHeaderUp(show) {
         if (show && isHidden) {
             headerUp.classList.remove('header-up-hidden');
             updateBurgerPosition(false);
             isHidden = false;
-
-            // Добавляем анимацию появления
-            headerUp.style.animation = 'slideDown 0.45s cubic-bezier(0.4, 0.0, 0.2, 1)';
-            setTimeout(() => {
-                headerUp.style.animation = '';
-            }, 450);
-
         } else if (!show && !isHidden) {
             headerUp.classList.add('header-up-hidden');
             updateBurgerPosition(true);
@@ -135,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     toggleHeaderUp(false);
                 }
 
-                // Всегда показываем у самого верха
-                if (scrollTop < 10) {
+                // Показываем панель при прокрутке вверх, а также у самого верха.
+                if (scrollTop < lastScrollTop || scrollTop < 10) {
                     toggleHeaderUp(true);
                 }
 
@@ -220,7 +214,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 768: { slidesPerView: 2.5, spaceBetween: 16 },
                 1024: { slidesPerView: 3, spaceBetween: 20 },
                 1280: { slidesPerView: 4, spaceBetween: 20 },
-                1440: { slidesPerView: 5, spaceBetween: 24 }
+                1440: { slidesPerView: 4, spaceBetween: 24 },
+                1820: { slidesPerView: 5, spaceBetween: 24 }
             },
 
             on: {
@@ -345,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Функция для открытия поиска
     function openSearch() {
+        if (!searchExpandOverlay || !searchExpandInput) return;
         searchExpandOverlay.classList.add('active');
         // Синхронизируем значение из обычного инпута
         if (searchInput && searchInput.value) {
@@ -360,21 +356,17 @@ document.addEventListener('DOMContentLoaded', function () {
             originalSearchBox.classList.add('hidden-search');
         }
 
-        // Блокируем скролл body
-        document.body.style.overflow = 'hidden';
     }
 
     // Функция для закрытия поиска
     function closeSearch() {
+        if (!searchExpandOverlay) return;
         searchExpandOverlay.classList.remove('active');
 
         // Возвращаем обычный поиск
         if (originalSearchBox) {
             originalSearchBox.classList.remove('hidden-search');
         }
-
-        // Разблокируем скролл
-        document.body.style.overflow = '';
 
         // Синхронизируем значение обратно в обычный инпут (если нужно)
         if (searchInput && searchExpandInput.value) {
@@ -411,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Закрытие по клавише ESC
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && searchExpandOverlay.classList.contains('active')) {
+        if (e.key === 'Escape' && searchExpandOverlay && searchExpandOverlay.classList.contains('active')) {
             closeSearch();
         }
     });
@@ -442,10 +434,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция открытия каталога
     function openCatalog() {
         if (!catalogDropdown || !catalogOverlay) return;
+
+        // Меню всегда начинается под видимой нижней частью шапки — и вверху,
+        // и после скрытия верхней панели.
+        const headerDown = document.querySelector('.h-down');
+        if (headerDown) {
+            catalogDropdown.style.setProperty('--catalog-top', `${headerDown.getBoundingClientRect().bottom}px`);
+        }
         catalogDropdown.classList.add('active');
         catalogOverlay.classList.add('active');
         if (catalogBtn) catalogBtn.classList.add('active');
-        document.body.style.overflow = 'hidden';
     }
 
     // Функция закрытия каталога
@@ -454,7 +452,6 @@ document.addEventListener('DOMContentLoaded', function () {
         catalogDropdown.classList.remove('active');
         catalogOverlay.classList.remove('active');
         if (catalogBtn) catalogBtn.classList.remove('active');
-        document.body.style.overflow = '';
     }
 
     // Переключение каталога
@@ -481,17 +478,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && catalogDropdown && catalogDropdown.classList.contains('active')) {
             closeCatalog();
-        }
-    });
-
-    // Закрытие при скролле
-    let scrollTimeout;
-    window.addEventListener('scroll', function () {
-        if (catalogDropdown && catalogDropdown.classList.contains('active')) {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                closeCatalog();
-            }, 100);
         }
     });
 
@@ -866,9 +852,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ── Панель «Оставить заявку» ─────────────────────────────
 (function () {
-    const overlay  = document.getElementById('zayavOverlay');
-    const panel    = document.getElementById('zayavPanel');
-    const nameInput  = document.getElementById('zav-name');
+    const overlay = document.getElementById('zayavOverlay');
+    const panel = document.getElementById('zayavPanel');
+    const nameInput = document.getElementById('zav-name');
     const phoneInput = document.getElementById('zav-phone');
 
     function openZayav() {
@@ -895,7 +881,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const btnClose = document.getElementById('zayavClose');
     if (btnClose) btnClose.addEventListener('click', closeZayav);
-    if (overlay)  overlay.addEventListener('click', closeZayav);
+    if (overlay) overlay.addEventListener('click', closeZayav);
 
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && panel && panel.classList.contains('active')) closeZayav();
@@ -936,7 +922,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSubmit = document.getElementById('zayavSubmit');
     if (btnSubmit) {
         btnSubmit.addEventListener('click', () => {
-            const name  = nameInput  ? nameInput.value.trim()  : '';
+            const name = nameInput ? nameInput.value.trim() : '';
             const phone = phoneInput ? phoneInput.value.trim() : '';
             let valid = true;
 
@@ -1061,7 +1047,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // ── Оформление заказа (шаги) ─────────────────────────────
 (function () {
     function showStep(n) {
-        [1,2,3,4].forEach(i => {
+        [1, 2, 3, 4].forEach(i => {
             const el = document.getElementById('cartStep' + i);
             if (el) el.style.display = i === n ? '' : 'none';
         });
@@ -1081,10 +1067,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (delivery && delivery.value === 'delivery') {
                 const addr = document.getElementById('cartAddress');
                 const addrErr = document.getElementById('cartAddressErr');
-                if (!addr.value.trim()) {
+                const value = addr.value.trim();
+
+                // минимальная длина + наличие хотя бы одной цифры (номер дома/квартиры)
+                const isValid = value.length >= 6 && /\d/.test(value);
+
+                if (!isValid) {
                     addr.classList.add('error');
                     addrErr.classList.add('visible');
                     return;
+                } else {
+                    addr.classList.remove('error');
+                    addrErr.classList.remove('visible');
                 }
             }
             showStep(3);
@@ -1127,9 +1121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (err) err.classList.toggle('visible', show);
     }
 
-    const cartName  = document.getElementById('cart-name');
+    const cartName = document.getElementById('cart-name');
     const cartEmail = document.getElementById('cart-email');
-    if (cartName)  cartName.addEventListener('input',  () => setCErr('cart-name',  'cerr-name',  false));
+    if (cartName) cartName.addEventListener('input', () => setCErr('cart-name', 'cerr-name', false));
     if (cartEmail) cartEmail.addEventListener('input', () => setCErr('cart-email', 'cerr-email', false));
     if (cartPhone) cartPhone.addEventListener('input', () => setCErr('cart-phone', 'cerr-phone', false));
 
@@ -1137,7 +1131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const step3Submit = document.getElementById('cartStep3Submit');
     if (step3Submit) {
         step3Submit.addEventListener('click', () => {
-            const name  = cartName  ? cartName.value.trim()  : '';
+            const name = cartName ? cartName.value.trim() : '';
             const phone = cartPhone ? cartPhone.value.trim() : '';
             const email = cartEmail ? cartEmail.value.trim() : '';
             let valid = true;

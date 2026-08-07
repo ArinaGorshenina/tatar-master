@@ -235,10 +235,11 @@ header .container {
     justify-content: space-between;
     gap: 20px;
 
-    /* Плавность как на 585zolotoy */
-    transition: transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
-        opacity 0.35s ease,
-        margin-bottom 0.35s ease;
+    max-height: 55px;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        padding-top 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
 
     transform: translateY(0);
     opacity: 1;
@@ -250,34 +251,11 @@ header .container {
 
 /* Класс для скрытия верхней панели */
 .h-up.header-up-hidden {
-    transform: translateY(-100%);
+    transform: translateY(-10px);
     opacity: 0;
-    margin-bottom: -55px;
-    /* Отрицательный отступ чтобы контент подтянулся */
+    max-height: 0;
+    padding-top: 0;
     pointer-events: none;
-}
-
-/* Небольшой эффект тени когда верхняя панель скрыта */
-.h-up.header-up-hidden+.h-down {
-    transform: translateY(-2px);
-    margin-top: 25px;
-}
-
-/* Анимация появления */
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.h-up:not(.header-up-hidden) {
-    animation: slideDown 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .h-down {
@@ -542,12 +520,18 @@ header .container {
     background: white;
     z-index: 1000;
     transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .search-expand-overlay.active {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Контейнер поиска */
@@ -596,23 +580,6 @@ header .container {
     background-color: #054F2A;
     border-color: #054F2A;
     color: white;
-}
-
-/* Анимация для плавного появления */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.search-expand-overlay.active {
-    animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Стили для обычного инпута (чтобы скрывать его при активации) */
@@ -690,7 +657,7 @@ header .container {
 
 /* Выпадающая плашка - ВЫЕЗЖАЕТ СНИЗУ ШАПКИ */
 .catalog-dropdown {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     z-index: 99;
@@ -705,7 +672,7 @@ header .container {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Важно: позиционируем относительно header */
-    top: 162px;
+    top: var(--catalog-top, 162px);
 }
 
 .catalog-dropdown.active {
@@ -720,7 +687,7 @@ header .container {
     background: white;
     border-radius: 60px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 80px 40px;
+    padding: 80px 40px; margin-top: 20px;
 }
 
 /* Сетка каталога */

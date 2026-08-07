@@ -19,11 +19,11 @@
         <div class="container">
             <div class="h-up">
                 <nav class="h-up-nav desktop">
-                    <a href="#" class="h-up-nav-link">контакты</a>
-                    <a href="#" class="h-up-nav-link">о компании</a>
-                    <a href="#" class="h-up-nav-link">блог</a>
-                    <a href="#" class="h-up-nav-link">оплата и доставка</a>
-                    <a href="#" class="h-up-nav-link">для мастеров</a>
+                    <a href="contact.html" class="h-up-nav-link">контакты</a>
+                    <a href="about.html" class="h-up-nav-link">о компании</a>
+                    <a href="blog.html" class="h-up-nav-link">блог</a>
+                    <a href="op_delivery.html" class="h-up-nav-link">оплата и доставка</a>
+                    <a href="master.html" class="h-up-nav-link">для мастеров</a>
                     <a href="catalog-categ-corp.html" class="h-up-nav-link">корпоративным клиентам</a>
                 </nav>
                 <div class="h-up-r">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="h-down-r desktop">
-                    <button class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></button>
+                    <a href="cart.html" class="btn btn-center"><img src="assets/images/header/Cart.svg" alt="menu"></a>
                     <button class="btn btn-center"><img src="assets/images/header/Heart.svg" alt="menu"></button>
                 </div>
             </div>
@@ -238,184 +238,204 @@
     <main class="main">
         <div class="cart-Page">
             <div class="container">
-             <div class="cart-page-box">
+                <div class="cart-page-box">
 
-    <!-- ШАГ 1: Корзина (текущий контент) -->
-    <div id="cartStep1">
-        <div class="cart-up">
-            <div class="cart-header">
-                <div class="ch-l">
-                    <p class="ch-p">2 товара</p>
-                    <p class="ch-p">•</p>
-                    <p class="ch-p">3 570₽</p>
-                </div>
-                <div class="ch-r">
-                    <button class="anketa-panel__apply" id="cartSubmit">
-                        <img src="assets/images/catalog/check.svg" alt="check">
-                        Оформить предзаказ
-                    </button>
-                </div>
-            </div>
-            <div class="cart-items">
-                <div class="cart-item">
-                    <div class="cart-item-l">
-                        <div class="cart-img-box">
-                            <img src="assets/images/imgH.png" alt="img">
-                        </div>
-                        <div class="cart-content-center">
-                            <div class="cart-content-up">
-                                <p class="cc-art">арт. 348954</p>
-                                <p class="cc-title">Говядина тушеная премиальная 450 гр 4 шт. Натуральное мясо</p>
+                    <!-- ШАГ 1: Корзина (текущий контент) -->
+                    <div id="cartStep1">
+                        <div class="cart-up">
+                            <div class="cart-header">
+                                <div class="ch-l">
+                                    <p class="ch-p">2 товара</p>
+                                    <p class="ch-p">•</p>
+                                    <p class="ch-p">3 570₽</p>
+                                </div>
+                                <div class="ch-r">
+                                    <button class="anketa-panel__apply" id="cartSubmit">
+                                        <img src="assets/images/catalog/check.svg" alt="check">
+                                        Оформить предзаказ
+                                    </button>
+                                </div>
                             </div>
-                            <div class="cart-content-down">
-                                <p class="cc-price">1 450 ₽</p>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item-l">
+                                        <div class="cart-img-box">
+                                            <img src="assets/images/imgH.png" alt="img">
+                                        </div>
+                                        <div class="cart-content-center">
+                                            <div class="cart-content-up">
+                                                <p class="cc-art">арт. 348954</p>
+                                                <p class="cc-title">Говядина тушеная премиальная 450 гр 4 шт.
+                                                    Натуральное мясо</p>
+                                            </div>
+                                            <div class="cart-content-down">
+                                                <p class="cc-price">1 450 ₽</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-content-r">
+                                        <button class="delCart"><img src="assets/images/cart/close-cart.svg"
+                                                alt="close"></button>
+                                        <div class="cart-calc">
+                                            <button class="cart-calc-p"><img src="assets/images/cart/minus.svg"
+                                                    alt="minus"></button>
+                                            <p class="cart-calc-p">1</p>
+                                            <button class="cart-calc-p"><img src="assets/images/cart/add.svg"
+                                                    alt="plus"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item-l">
+                                        <div class="cart-img-box">
+                                            <img src="assets/images/imgH.png" alt="img">
+                                        </div>
+                                        <div class="cart-content-center">
+                                            <div class="cart-content-up">
+                                                <p class="cc-art">арт. 348954</p>
+                                                <p class="cc-title">Говядина тушеная премиальная 450 гр 4 шт.
+                                                    Натуральное мясо</p>
+                                            </div>
+                                            <div class="cart-content-down">
+                                                <p class="cc-price">1 450 ₽</p>
+                                                <p class="cc-price-sk">2 120 ₽</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-content-r">
+                                        <button class="delCart"><img src="assets/images/cart/close-cart.svg"
+                                                alt="close"></button>
+                                        <div class="cart-calc">
+                                            <button class="cart-calc-p"><img src="assets/images/cart/minus.svg"
+                                                    alt="minus"></button>
+                                            <p class="cart-calc-p">1</p>
+                                            <button class="cart-calc-p"><img src="assets/images/cart/add.svg"
+                                                    alt="plus"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-down-box">
+                            <div class="cart-down">
+                                <div class="cart-down-content">
+                                    <div class="cart-down-item">
+                                        <p class="cd-title cd-title-itog">Итого в корзине:</p>
+                                        <p class="cd-title cd-title-itog">3 070₽</p>
+                                    </div>
+                                    <div class="cart-down-item">
+                                        <p class="cd-title">Товары</p>
+                                        <p class="cd-title cd-price">3 570₽</p>
+                                    </div>
+                                    <div class="cart-down-item">
+                                        <p class="cd-title">Скидка</p>
+                                        <p class="cd-title cd-price">- 500₽</p>
+                                    </div>
+                                    <button class="anketa-panel__apply cartSubmitBtn">
+                                        <img src="assets/images/catalog/check.svg" alt="check">
+                                        Оформить предзаказ
+                                    </button>
+                                </div>
+                                <p class="cart-politic">Нажимая кнопку «Оформить предзаказ», я подтверждаю, что
+                                    ознакомился с Политикой конфиденциальности.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="cart-content-r">
-                        <button class="delCart"><img src="assets/images/cart/close-cart.svg" alt="close"></button>
-                        <div class="cart-calc">
-                            <button class="cart-calc-p"><img src="assets/images/cart/minus.svg" alt="minus"></button>
-                            <p class="cart-calc-p">1</p>
-                            <button class="cart-calc-p"><img src="assets/images/cart/add.svg" alt="plus"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-item-l">
-                        <div class="cart-img-box">
-                            <img src="assets/images/imgH.png" alt="img">
-                        </div>
-                        <div class="cart-content-center">
-                            <div class="cart-content-up">
-                                <p class="cc-art">арт. 348954</p>
-                                <p class="cc-title">Говядина тушеная премиальная 450 гр 4 шт. Натуральное мясо</p>
+
+                    <!-- ШАГ 2: Способ получения -->
+                    <div id="cartStep2" style="display:none;">
+                        <div class="cart-checkout">
+                            <img src="assets/images/cart/cart.png" alt="корзина" class="cart-checkout__img">
+                            <h2 class="cart-checkout__title">Как вы хотите<br>получить заказ?</h2>
+
+                            <div class="cart-delivery-options">
+                                <label class="cart-delivery-option" id="optPickup">
+                                    <input type="radio" name="delivery" value="pickup" checked>
+                                    <span class="cart-delivery-option__radio"></span>
+                                    <span class="cart-delivery-option__label">Заберу сам из магазина</span>
+                                </label>
+
+                                <label class="cart-delivery-option" id="optDelivery">
+                                    <input type="radio" name="delivery" value="delivery">
+                                    <span class="cart-delivery-option__radio"></span>
+                                    <span class="cart-delivery-option__label">Нужна доставка</span>
+                                    <div class="cart-delivery-address" id="cartAddressBlock">
+                                        <p class="cart-delivery-address__hint">Пожалуйста, напишите, куда нужно будет
+                                            доставить заказ</p>
+                                        <div class="cart-del">
+                                            <input type="text" id="cartAddress" class="cart-delivery-address__input"
+                                                placeholder="Например, Казань, Бутлерова 21, кв 32" autocomplete="off">
+                                            <span class="anketa-field__error" id="cartAddressErr">Введите корректный адрес
+                                                доставки</span>
+                                        </div>
+
+                                        <p class="cart-delivery-address__note">Обращаем ваше внимание на то, что
+                                            доставка может быть платной. После вашего заказа наш менеджер позвонит вам и
+                                            все уточнит.</p>
+                                    </div>
+                                </label>
                             </div>
-                            <div class="cart-content-down">
-                                <p class="cc-price">1 450 ₽</p>
-                                <p class="cc-price-sk">2 120 ₽</p>
+
+                            <button class="anketa-panel__apply cart-checkout__btn" id="cartStep2Next"
+                                style="margin-top: 10px;">
+                                <img src="assets/images/catalog/check.svg" alt="check">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ШАГ 3: Контактные данные -->
+                    <div id="cartStep3" style="display:none;">
+                        <div class="cart-checkout">
+                            <h2 class="cart-checkout__title">Пожалуйста, оставьте
+                                свои данные для заказа</h2>
+
+                            <div class="anketa-panel__body cart-contacts-body">
+                                <div class="anketa-field">
+                                    <label for="cart-name">Как вас зовут?</label>
+                                    <input type="text" id="cart-name" placeholder="Максим" autocomplete="off">
+                                    <span class="anketa-field__error" id="cerr-name">Введите ваше имя</span>
+                                </div>
+                                <div class="anketa-field">
+                                    <label for="cart-phone">Ваш телефон</label>
+                                    <input type="tel" id="cart-phone" placeholder="+7 (***) ***-**-**"
+                                        autocomplete="off">
+                                    <span class="anketa-field__error" id="cerr-phone">Введите корректный номер</span>
+                                </div>
+                                <div class="anketa-field">
+                                    <label for="cart-email">Электронная почта</label>
+                                    <input type="email" id="cart-email" placeholder="example@mail.ru"
+                                        autocomplete="off">
+                                    <span class="anketa-field__error" id="cerr-email">Введите корректный email</span>
+                                </div>
+                            </div>
+
+                            <div class="anketa-panel__footer cart-contacts-footer">
+                                <button class="anketa-panel__apply" id="cartStep3Submit">
+                                    <img src="assets/images/catalog/check.svg" alt="check">
+                                    Оформить предзаказ
+                                </button>
+                                <p class="anketa-panel__note">Нажимая кнопку «Отправить заказ», я подтверждаю, что
+                                    ознакомился с Политикой конфиденциальности.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="cart-content-r">
-                        <button class="delCart"><img src="assets/images/cart/close-cart.svg" alt="close"></button>
-                        <div class="cart-calc">
-                            <button class="cart-calc-p"><img src="assets/images/cart/minus.svg" alt="minus"></button>
-                            <p class="cart-calc-p">1</p>
-                            <button class="cart-calc-p"><img src="assets/images/cart/add.svg" alt="plus"></button>
+
+                    <!-- ШАГ 4: Успех -->
+                    <div id="cartStep4" style="display:none;">
+                        <div class="anketa-success-view" style="display:flex;">
+                            <div class="anketa-success__body">
+                                <img src="assets/images/master/chack.png" alt="Успешно" class="anketa-success__img">
+                                <p class="anketa-success__text">Предзаказ успешно оформлен!</p>
+                                <p class="anketa-success__text-desc">Наш менеджер скоро свяжется с вами, чтобы уточнить
+                                    детали оплаты и доставки</p>
+                                <a href="index.html"
+                                    class="anketa-panel__apply anketa-success__btn anketa-cart-btn">Окей</a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-        </div>
-        <div class="cart-down-box">
-            <div class="cart-down">
-                <div class="cart-down-content">
-                    <div class="cart-down-item">
-                        <p class="cd-title cd-title-itog">Итого в корзине:</p>
-                        <p class="cd-title cd-title-itog">3 070₽</p>
-                    </div>
-                    <div class="cart-down-item">
-                        <p class="cd-title">Товары</p>
-                        <p class="cd-title cd-price">3 570₽</p>
-                    </div>
-                    <div class="cart-down-item">
-                        <p class="cd-title">Скидка</p>
-                        <p class="cd-title cd-price">- 500₽</p>
-                    </div>
-                    <button class="anketa-panel__apply cartSubmitBtn">
-                        <img src="assets/images/catalog/check.svg" alt="check">
-                        Оформить предзаказ
-                    </button>
-                </div>
-                <p class="cart-politic">Нажимая кнопку «Оформить предзаказ», я подтверждаю, что ознакомился с Политикой конфиденциальности.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ШАГ 2: Способ получения -->
-    <div id="cartStep2" style="display:none;">
-        <div class="cart-checkout">
-            <img src="assets/images/cart/cart.png" alt="корзина" class="cart-checkout__img">
-            <h2 class="cart-checkout__title">Как вы хотите<br>получить заказ?</h2>
-
-            <div class="cart-delivery-options">
-                <label class="cart-delivery-option" id="optPickup">
-                    <input type="radio" name="delivery" value="pickup" checked>
-                    <span class="cart-delivery-option__radio"></span>
-                    <span class="cart-delivery-option__label">Заберу сам из магазина</span>
-                </label>
-
-                <label class="cart-delivery-option" id="optDelivery">
-                    <input type="radio" name="delivery" value="delivery">
-                    <span class="cart-delivery-option__radio"></span>
-                    <span class="cart-delivery-option__label">Нужна доставка</span>
-                    <div class="cart-delivery-address" id="cartAddressBlock">
-                        <p class="cart-delivery-address__hint">Пожалуйста, напишите, куда нужно будет доставить заказ</p>
-                       <div class="cart-del">
-                        <input type="text" id="cartAddress" class="cart-delivery-address__input" placeholder="Например, Казань, Бутлерова 21, кв 32" autocomplete="off">
-                        <span class="anketa-field__error" id="cartAddressErr">Введите адрес доставки</span>
-                       </div>
-                        
-                        <p class="cart-delivery-address__note">Обращаем ваше внимание на то, что доставка может быть платной. После вашего заказа наш менеджер позвонит вам и все уточнит.</p>
-                    </div>
-                </label>
-            </div>
-
-            <button class="anketa-panel__apply cart-checkout__btn" id="cartStep2Next" style="margin-top: 10px;">
-                <img src="assets/images/catalog/check.svg" alt="check">
-                Далее
-            </button>
-        </div>
-    </div>
-
-    <!-- ШАГ 3: Контактные данные -->
-    <div id="cartStep3" style="display:none;">
-        <div class="cart-checkout">
-            <h2 class="cart-checkout__title">Пожалуйста, оставьте 
-свои данные для заказа</h2>
-
-            <div class="anketa-panel__body cart-contacts-body">
-                <div class="anketa-field">
-                    <label for="cart-name">Как вас зовут?</label>
-                    <input type="text" id="cart-name" placeholder="Максим" autocomplete="off">
-                    <span class="anketa-field__error" id="cerr-name">Введите ваше имя</span>
-                </div>
-                <div class="anketa-field">
-                    <label for="cart-phone">Ваш телефон</label>
-                    <input type="tel" id="cart-phone" placeholder="+7 (***) ***-**-**" autocomplete="off">
-                    <span class="anketa-field__error" id="cerr-phone">Введите корректный номер</span>
-                </div>
-                <div class="anketa-field">
-                    <label for="cart-email">Электронная почта</label>
-                    <input type="email" id="cart-email" placeholder="example@mail.ru" autocomplete="off">
-                    <span class="anketa-field__error" id="cerr-email">Введите корректный email</span>
-                </div>
-            </div>
-
-            <div class="anketa-panel__footer cart-contacts-footer">
-                <button class="anketa-panel__apply" id="cartStep3Submit">
-                    <img src="assets/images/catalog/check.svg" alt="check">
-                 Оформить предзаказ
-                </button>
-                <p class="anketa-panel__note">Нажимая кнопку «Отправить заказ», я подтверждаю, что ознакомился с Политикой конфиденциальности.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ШАГ 4: Успех -->
-    <div id="cartStep4" style="display:none;">
-        <div class="anketa-success-view" style="display:flex;">
-            <div class="anketa-success__body">
-                <img src="assets/images/master/chack.png" alt="Успешно" class="anketa-success__img">
-                <p class="anketa-success__text">Предзаказ успешно оформлен!</p>
-                <p class="anketa-success__text-desc">Наш менеджер скоро свяжется с вами, чтобы уточнить детали оплаты и доставки</p>
-                <a href="index.html" class="anketa-panel__apply anketa-success__btn anketa-cart-btn">Окей</a>
-            </div>
-        </div>
-    </div>
-
-</div>
 
             </div>
         </div>
@@ -497,12 +517,14 @@
             </div>
         </div>
     </footer>
-  <div class="cookie">
+    <div class="cookie">
         <div class="container">
             <div class="cookie-box">
-                <p class="cookie-desc">Мы используем <a href="#" style="text-decoration: underline;">файлы cookie</a> для корректной работы сайта, анализа трафика и
+                <p class="cookie-desc">Мы используем <a href="#" style="text-decoration: underline;">файлы cookie</a>
+                    для корректной работы сайта, анализа трафика и
                     улучшения
-                    сервиса. Продолжая использовать сайт, <a href="#" style="text-decoration: underline;">вы соглашаетесь с обработкой данных.</a> </p>
+                    сервиса. Продолжая использовать сайт, <a href="#" style="text-decoration: underline;">вы
+                        соглашаетесь с обработкой данных.</a> </p>
                 <button class="btn cookie-btn">Окей</button>
             </div>
 
